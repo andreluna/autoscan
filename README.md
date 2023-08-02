@@ -49,6 +49,37 @@ meusite.com
 seusite.net
 ```
 
+## Resultados:
+
+Todos os resultados ficam salvos em arquivos com a data.
+
+Saída Subfinder:
+```
+root@ec2-server:/opt/autoscan/subfinder_outputs/archive-28-07-2023# ls -1
+intigriti.com.txt
+hackerone.com.txt
+```
+
+Saída Httpx:
+
+```
+root@ec2-server:/opt/autoscan/httpx_outputs/archive-28-07-2023# ls -1
+intigriti.com.txt
+hackerone.com.txt
+```
+
+Saída Nuclei:
+
+```
+root@ec2-server:/opt/autoscan//nuclei_outputs/archive-01-08-2023# ls -ls che*
+4 -rw-r--r-- 1 root root 2469 Aug  1 17:47 check-result-01-08-2023.txt
+```
+
+**Observação:**
+
+O Nuclei localizando vulnerabilidades, eles vão ficar salvas em um arquivo chamado **check-results-DIA-MÊS-ANO.txt** e o resultado será enviado linha por linha para o canal no Slack.
+
+
 ## Alterando a versão:
 
 Para modificar a versão de alguns dos software, basta alterar o número da versão no arquivo.
@@ -69,5 +100,3 @@ projectdiscovery_url="https://github.com/projectdiscovery"
 [Subfinder](https://github.com/projectdiscovery/subfinder)
 [Httpx](https://github.com/projectdiscovery/httpx)
 [Nuclei](https://github.com/projectdiscovery/nuclei)
-
-
